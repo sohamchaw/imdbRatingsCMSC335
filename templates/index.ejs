@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Movie Search</h1>
+
+    <form method="POST" action="/search">
+      <input type="text" name="title" placeholder="Enter movie title" />
+      <button type="submit">Search</button>
+    </form>
+
+    <p>
+      <a href="/movies">View movies</a>
+    </p>
+
+    <form method="POST" action="/clear">
+      <button type="submit">Clear movies</button>
+    </form>
+
+    <% if (error) { %>
+      <p><%= error %></p>
+    <% } %>
+
+    <% if (movie) { %>
+      <h2><%= movie.title %> (<%= movie.year %>)</h2>
+      <p><strong>Rating:</strong> <%= movie.rating %></p>
+      <p><strong>Synopsis:</strong> <%= movie.synopsis %></p>
+      <small>Saved to database</small>
+    <% } %>
+  </body>
+</html>

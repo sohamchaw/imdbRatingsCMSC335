@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Saved Movies</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Saved Movies</h1>
+
+    <p><a href="/">Back to search</a></p>
+
+    <% if (!movies || movies.length === 0) { %>
+      <p>No movies saved yet.</p>
+    <% } else { %>
+      <% movies.forEach(m => { %>
+        <h2><%= m.title %> (<%= m.year %>)</h2>
+        <p>Rating: <%= m.rating %></p>
+        <p><%= m.synopsis %></p>
+        <small>IMDb ID: <%= m.imdbId %></small>
+        <hr />
+      <% }) %>
+    <% } %>
+  </body>
+</html>

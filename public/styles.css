@@ -1,0 +1,37 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+body {
+  background-color: #111827;
+  color: #e5e7eb;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 16px;
+}
+
+small {
+  font-size: 14px;
+}
+
+button, input {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #111827;
+  background-color: #e5e7eb;
+}
+
+a {
+  color: #93c5fd;
+  font-size: 16px;
+}
